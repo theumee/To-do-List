@@ -57,7 +57,7 @@ function addTask(e){
         e.preventDefault();
         var task = document.getElementById("task");
         var elm = document.createElement("li");
-        elm.innerHTML = `<input type='checkbox' value="${task.value}" id='chkBox'>`;
+        elm.innerHTML = `<input type='checkbox' id='chkBox'> <label  for="chkbox">${task.value}</label>`;
         if(task.value.trim() === ''){
             window.alert("Empty input!");
             task.value ='';
@@ -92,12 +92,6 @@ function addTask(e){
                 unorderedList.removeChild(li);
 
             
-        }
-        else{
-            let li = e.target;;
-            if(li.className === 'incompleted-task')
-                li.className = 'completed-task';
-                li.className = 'incompleted-task';
         }
 
     }
