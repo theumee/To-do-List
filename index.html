@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+
+    <div class="box">
+        
+        <h1>
+            To-do List
+        </h1>
+    
+        <form class="ip-box" id="submit-task">
+            <label for="task"><h3>Add new task</h3></label>
+            <br>
+            <input type="text" required="required" id="task" placeholder="Enter a Task">
+            <input type="submit" value="Add" id="addTask">
+        </form>
+
+        <h3 class='myTasks'>My Tasks</h3>
+        <ul id="myTaskList">
+           
+ 
+        </ul>
+
+        <h4 id='totalTasks'>
+            You have 0 Tasks left.
+        </h4>
+    </div>
+
+
+    <footer>
+        <p>2021 Umer Farooq</p>
+    </footer>
+</body>
+<script src="/app/main.js"></script>
+</html>
