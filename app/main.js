@@ -49,52 +49,71 @@ let unorderedList = document.getElementById('myTaskList');
 let newTask = document.getElementById("submit-task"); 
 
 newTask.addEventListener('submit',addTask);
-unorderedList.addEventListener('click',removeTaskOrMark);
+unorderedList.addEventListener('click',removeTask);
 
-let taskArr = [];
+let listArr = [];
+let  idx = 0;
+
 function addTask(e){
 
         e.preventDefault();
         var task = document.getElementById("task");
-        var elm = document.createElement("li");
-        elm.innerHTML = `<input type='checkbox' id='chkBox'> <label  for="chkbox">${task.value}</label>`;
+        var li = document.createElement("li");
         if(task.value.trim() === ''){
             window.alert("Empty input!");
             task.value ='';
-            return
+            return;
         }
         
-        unorderedList.appendChild(elm);
         
-        let ip = document.getElementById('chkbox')
+        li.className = "incomplete-task";
+        li.setAttribute("onclick","markcomp(this)");
+        li.textContent = task.value;
+        unorderedList.appendChild(li);
+        
         // ip.textContent = task.value;
         // ip.className = 'incomplete-task';
 
-        taskArr.push(task.value); 
      
-        var deleteTask = document.createElement("button");
-        deleteTask.type = "button";
+        var deleteTask = document.createElement("span");
         deleteTask.className = 'delete';
-        deleteTask.textContent = "❌";
-        elm.appendChild(deleteTask);
+        deleteTask.textContent = "x";
+        li.appendChild(deleteTask);
         
         task.value ='';
 
+    }
+
 
         
-    }
+    
+
+    // window.addEventListener('load',showTasks);
+
+    // function showTasks(){
+    //     // for(let i = 0 ; i < listArr.length; i++){
+
+        
+    // }
 
 
 
-    function removeTaskOrMark(e){
-        if(e.target.classList.contains('delete')){
+    function removeTask(e){
+        if(e.target.className === 'delete'){
                 let li = e.target.parentElement;
                 unorderedList.removeChild(li);
-
-            
+                
         }
-
+        
+        
     }
+    function markcomp(e){
+        e.className = 'completed-task';
+    }
+
+    
+
+    
 
 
 
@@ -114,9 +133,8 @@ function addTask(e){
 
     
 
-let totalTasks = document.getElementById('totalTasks');
-totalTasks.textContent = `You have ${taskArr.length}  tasks left.`;    
-console.log(taskArr);
+
+
 
 
 
