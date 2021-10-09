@@ -26,20 +26,20 @@ body{
 .incomplete-task{
     
     color:#000000;
-    font-weight: 500;
+    font-weight: 700;
     transition: 500ms;
 }
 
 .completed-task{
     
-    font-weight:500;
-    background-color: rgb(207, 207, 207);
-    color: rgb(56, 56, 56);
+    font-weight:700;
+    background-color: rgb(116, 184, 70);
+    color: rgb(66, 66, 66);
     text-decoration: line-through;
     opacity: 0.8;
     /* transform: rotate(360deg); */
     transition: 300ms;
-    list-style:symbols()
+
     /* color: green; */
 }
 
@@ -51,33 +51,29 @@ ul{
     overflow-y: scroll;
 }
 li{
-    
-    background-color: rgb(134, 126, 126);
+
+    background-color: rgb(201, 201, 201);
     list-style:none;
     position: relative;
     padding: 0 15px;
-    margin: 10px 20px 0 30px;
+    margin: 10px 40px 0 40px;
     cursor: pointer;
     height: 40px;
     line-height: 40px;
     font-weight: 400;
     border-radius: 20px;
 }
-li:hover{
-    background-color: rgb(177, 176, 176);
-}
 
-li:nth-child(odd){
-    background-color: rgb(168, 168, 168);
-}
-.delete:nth-child(odd){
-    background-color: rgb(168, 168, 168);
+
+
+li:hover{
+    background-color: rgb(211, 204, 103);
 }
 
 
 
 .delete{
-    background-color: rgb(134, 126, 126);
+
     width: 40px;
     height: 40px;
     text-align: center;
@@ -96,6 +92,8 @@ li:nth-child(odd){
    
 }
 
+
+
 h1{
     color: white;
     background-color: rgb(26, 26, 26);
@@ -109,14 +107,14 @@ h1{
 }
 
 #addTask{
-    background-color: rgb(121, 121, 121);
+    background-color: rgb(82, 131, 221);
     width: 50px;
     height: 30px;
     font-size: 15px;
     border-radius: 20px;
 }
 #addTask:hover{
-    background-color: rgb(179, 179, 179);
+    background-color: rgb(149, 225, 255);
 }
 #task{
     width: 250px;

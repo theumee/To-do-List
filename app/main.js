@@ -51,8 +51,6 @@ let newTask = document.getElementById("submit-task");
 newTask.addEventListener('submit',addTask);
 unorderedList.addEventListener('click',removeTask);
 
-let listArr = [];
-let  idx = 0;
 
 function addTask(e){
 
@@ -71,8 +69,6 @@ function addTask(e){
         li.textContent = task.value;
         unorderedList.appendChild(li);
         
-        // ip.textContent = task.value;
-        // ip.className = 'incomplete-task';
 
      
         var deleteTask = document.createElement("span");
@@ -81,20 +77,7 @@ function addTask(e){
         li.appendChild(deleteTask);
         
         task.value ='';
-
     }
-
-
-        
-    
-
-    // window.addEventListener('load',showTasks);
-
-    // function showTasks(){
-    //     // for(let i = 0 ; i < listArr.length; i++){
-
-        
-    // }
 
 
 
