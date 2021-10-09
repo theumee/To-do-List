@@ -108,7 +108,12 @@ function addTask(e){
         
     }
     function markcomp(e){
-        e.className = 'completed-task';
+        if(e.className === 'incomplete-task'){
+            e.className = 'completed-task';
+        }
+        else{
+            e.className = 'incomplete-task';
+        }
     }
 
     
