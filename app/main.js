@@ -1,50 +1,4 @@
 
-// var count = 0;
-// var unorderedList = document.querySelector("ul");
-
-// var addTaskBtn = document.getElementById("addTask").addEventListener('click',addTask);
-
-// function addToStorage(){
-//     var task = document.getElementById("task").value;
-
-// }
-
-
-// function addTask(){
-
-//     var task = document.getElementById("task").value;
-//     var elm = document.createElement("li");
-//     count++;
-//     elm.id = "task" + count;
-//     elm.textContent = task;
-//     unorderedList.appendChild(elm);
-
-//     // var compeleted = document.createElement("button");
-//     // compeleted.type = "button";
-//     // compeleted.id = "comp-btn"  + count;
-//     // compeleted.setAttribute('onclick','markAsCompleted(count)');
-//     // compeleted.textContent = "✓";
-//     // elm.appendChild(compeleted);
-
-//     var deleteTask = document.createElement("button");
-//     deleteTask.type = "button";
-//     deleteTask.id = "del-btn";
-//     deleteTask.textContent = "❌";
-//     elm.appendChild(deleteTask);
-
-// }
-// // var markAsCompletedBtn = document.getElementById("comp-btn").addEventListener('click',markAsCompleted);
-// function markAsCompleted(c){
-//     document.getElementById('task' + c).className = "completed-task"; 
-// }
-
-// function deleteTaskBtn(){
-//     document.getElementById("task" + count ).remove();
-//     document.getElementById("del-btn" + count ).remove();
-//     document.getElementById("comp-btn" + count ).remove();
-
-// }
-
 let unorderedList = document.getElementById('myTaskList');
 let newTask = document.getElementById("submit-task"); 
 
@@ -99,29 +53,9 @@ function addTask(e){
         }
     }
 
-    
 
-    
-
-
-
-    // LEFt for Later
-    // document.querySelector('.taskList').addEventListener('mouseenter',displayDelBtn);
-    // document.querySelector('.taskList').addEventListener('mouseleave',dontDisplayDelBtn);
-
-    // function displayDelBtn(){
-    //     console.log("i m here");
-    //     document.querySelector('.delete').style.display = 'inline';
-    // }
-
-    // function dontDisplayDelBtn(){
-    //     console.log("i m here");
-    //     document.querySelector('.delete').style.display = 'none';
-    // }
 
     
-
-
 
 
 
